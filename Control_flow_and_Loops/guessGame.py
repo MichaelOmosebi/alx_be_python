@@ -1,12 +1,13 @@
 import random
 # Guessing Game
+# This code implements a simple guessing game where the user has to guess a randomly generated number between 1 and 10.
 
 secret_number = random.randint(1, 10)
-# This code implements a simple guessing game where the user has to guess a randomly generated number between 1 and 10.
 
 guess_count = 0
 print("Welcome to the Guessing Game!")
 print("I have selected a secret number between 1 and 10.")
+
 guess = int(input("Guess a number between 1 and 10: "))
 
 while guess != secret_number:
