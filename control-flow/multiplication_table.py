@@ -12,4 +12,5 @@ for i in range(1, 11):
     X = number
     Y = i
     Z = number * i
-    print(f"{X} * {Y} = {Z}")
+    print(f"{number} * {i} = {number * i}")
+
