@@ -19,9 +19,6 @@ match time_bound:
         message = "Consider completing it when you have free time."
         reminder = f"Note: '{task}' is a {priority} priority task. {message}"
         print(reminder)
-        
-    case _:
-        print("Invalid priority level. Please enter high, medium, or low.")
 
 # match priority:
 #     case 'high':
