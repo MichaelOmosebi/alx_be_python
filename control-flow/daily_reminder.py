@@ -35,28 +35,40 @@ time_bound = input("Is it time-bound? (yes/no): ").lower()
 # print(reminder)
 
 
-match priority:
-    case 'high':
-        message = "that requires immediate attention today!"
-        if time_bound == 'yes':
-            reminder = f"Reminder: '{task}' is a {priority} priority task {message}"
-        else:
-            reminder = f"Note: '{task}' is a {priority} priority task {message}"
-    case 'medium':
-        message = "It would be good to finish it today, but it's not urgent."
-        if time_bound == 'yes':
-            reminder = f"Reminder: '{task}' is a {priority} priority task {message}"
-        else:
-            reminder = f"Note: '{task}' is a {priority} priority task {message}"
-    case 'low':
-        message = "Consider completing it when you have free time."
-        if time_bound == 'yes':
-            reminder = f"Reminder: '{task}' is a {priority} priority task {message}"
-        else:
-            reminder = f"Note: '{task}' is a {priority} priority task {message}"
+# match priority:
+#     case 'high':
+#         message = f"'{task}' is a {priority} priority task."
+#         if time_bound == 'yes':
+#             reminder = f"Reminder: '{message} that requires immediate attention today!"
+#         else:
+#             reminder = f"Note: '{message}' Consider completing it when you have free time."
+#     case 'medium':
+#         message = "It would be good to finish it today, but it's not urgent."
+#         if time_bound == 'yes':
+#             reminder = f"Reminder: '{task}' is a {priority} priority task {message}"
+#         else:
+#             reminder = f"Note: '{task}' is a {priority} priority task {message}"
+#     case 'low':
+#         message = "Consider completing it when you have free time."
+#         if time_bound == 'yes':
+#             reminder = f"Reminder: '{task}' is a {priority} priority task {message}"
+#         else:
+#             reminder = f"Note: '{task}' is a {priority} priority task {message}"
 
+#     case _:
+#         reminder = "Invalid priority level. Please enter high, medium, or low."
+
+# print(reminder)
+
+
+match time_bound:
+    case 'yes':
+        reminder = f"Reminder: '{task}' is a {priority} priority task that requires immediate attention today!"
+
+    case 'no':
+        reminder = f"Note: '{task}' is a {priority} priority task. Consider completing it when you have free time."
+        
     case _:
         reminder = "Invalid priority level. Please enter high, medium, or low."
 
 print(reminder)
-# This script provides a simple reminder system based on user input, demonstrating the use of control flow with Match Case and conditional statements.
