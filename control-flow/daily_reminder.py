@@ -33,3 +33,29 @@ match priority:
         reminder = "Invalid priority level. Please enter high, medium, or low."
 
 print(reminder)
+
+
+match priority:
+    case 'high':
+        reminder = f"'{task}' is a {priority} priority task."
+        if time_bound == 'yes':
+            reminder += " that requires immediate attention today!"
+        else:
+            reminder += " Please complete it as soon as possible."
+    case 'medium':
+        reminder = f"'{task}' is a {priority} priority task."
+        if time_bound == 'yes':
+            reminder += " This should be addressed today."
+        else:
+            reminder += " You can complete it later this week."
+    case 'low':
+        reminder = f"'{task}' is a {priority} priority task."
+        if time_bound == 'yes':
+            reminder += " It would be good to finish it today, but it's not urgent."
+        else:
+            reminder += " Consider completing it when you have free time."
+
+    case _:
+        reminder = "Invalid priority level. Please enter high, medium, or low."
+
+print(reminder)
