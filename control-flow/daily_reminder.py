@@ -9,53 +9,53 @@ task = input("Enter your task: ").lower().title()
 priority = input("Priority (high/medium/low): ").lower()
 time_bound = input("Is it time-bound? (yes/no): ").lower()
 
+# match priority:
+#     case 'high':
+#         reminder = f"'{task}' is a High priority task."
+#         if time_bound == 'yes':
+#             reminder += " that requires immediate attention today!"
+#         else:
+#             reminder += " Please complete it as soon as possible."
+#     case 'medium':
+#         reminder = f"'{task}' is a medium priority task."
+#         if time_bound == 'yes':
+#             reminder += " This should be addressed today."
+#         else:
+#             reminder += " You can complete it later this week."
+#     case 'low':
+#         reminder = f"'{task}' is a low priority task."
+#         if time_bound == 'yes':
+#             reminder += " It would be good to finish it today, but it's not urgent."
+#         else:
+#             reminder += " Consider completing it when you have free time."
+
+#     case _:
+#         reminder = "Invalid priority level. Please enter high, medium, or low."
+
+# print(reminder)
+
+
 match priority:
     case 'high':
-        reminder = f"'{task}' is a High priority task."
+        reminder = f"'{task}' is a {priority} priority task"
         if time_bound == 'yes':
             reminder += " that requires immediate attention today!"
         else:
-            reminder += " Please complete it as soon as possible."
+            reminder += ". Please complete it as soon as possible."
     case 'medium':
-        reminder = f"'{task}' is a medium priority task."
+        reminder = f"'{task}' is a {priority} priority task"
         if time_bound == 'yes':
-            reminder += " This should be addressed today."
+            reminder += ". This should be addressed today."
         else:
-            reminder += " You can complete it later this week."
+            reminder += ". You can complete it later this week."
     case 'low':
-        reminder = f"'{task}' is a low priority task."
+        reminder = f"'{task}' is a {priority} priority task"
         if time_bound == 'yes':
-            reminder += " It would be good to finish it today, but it's not urgent."
+            reminder += ". It would be good to finish it today, but it's not urgent."
         else:
-            reminder += " Consider completing it when you have free time."
+            reminder += ". Consider completing it when you have free time."
 
     case _:
         reminder = "Invalid priority level. Please enter high, medium, or low."
 
 print(reminder)
-
-
-match priority:
-    case 'high':
-        reminder = f"'{task}' is a {priority} priority task."
-        if time_bound == 'yes':
-            reminder += " that requires immediate attention today!"
-        else:
-            reminder += " Please complete it as soon as possible."
-    case 'medium':
-        reminder = f"'{task}' is a {priority} priority task."
-        if time_bound == 'yes':
-            reminder += " This should be addressed today."
-        else:
-            reminder += " You can complete it later this week."
-    case 'low':
-        reminder = f"'{task}' is a {priority} priority task."
-        if time_bound == 'yes':
-            reminder += " It would be good to finish it today, but it's not urgent."
-        else:
-            reminder += " Consider completing it when you have free time."
-
-    case _:
-        reminder = "Invalid priority level. Please enter high, medium, or low."
-
-        print(reminder)
