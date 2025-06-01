@@ -13,15 +13,15 @@ match time_bound:
     case 'yes':
         message = f"that requires immediate attention today!"
         reminder = f"Reminder: '{task}' is a {priority} priority task {message}"
+        print(reminder)
 
     case 'no':
         message = "Consider completing it when you have free time."
         reminder = f"Note: '{task}' is a {priority} priority task. {message}"
+        print(reminder)
         
     case _:
         print("Invalid priority level. Please enter high, medium, or low.")
-
-print(reminder)
 
 # match priority:
 #     case 'high':
