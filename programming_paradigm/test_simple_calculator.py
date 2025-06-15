@@ -55,4 +55,7 @@ class TestSimpleCalculator(unittest.TestCase):
 if __name__ == "__main__":
   unittest.main()
 # test_simple_calculator.py doesn't contain: ["test_addition", "test_addition(self)"]
+# ["test_subtraction", "test_subtraction(self)"]
+# ["test_multiplication", "test_multiplication(self)"]
+# ["test_division", "test_division(self)"]
 
