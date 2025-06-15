@@ -50,3 +50,9 @@ class TestSimpleCalculator(unittest.TestCase):
         self.assertEqual(self.calc.divide(6, 3), 2)
         self.assertEqual(self.calc.divide(5, 2), 2.5)
         self.assertIsNone(self.calc.divide(5, 0))  # Division by zero should return None
+
+
+if __name__ == "__main__":
+  unittest.main()
+# test_simple_calculator.py doesn't contain: ["test_addition", "test_addition(self)"]
+
