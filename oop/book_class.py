@@ -23,7 +23,7 @@ class Book:
         self.author = author
         self.year = year
 
-    def __del__(self) -> None:
+    def __del__(self):
         """Destructor that prints a message when the book instance is deleted."""
         print(f"Deleting {self.title}")
 
@@ -34,5 +34,4 @@ class Book:
     def __repr__(self):
         """Official representation of the Book instance."""
         return f"Book('{self.title}', '{self.author}', {self.year})"
-    
     
