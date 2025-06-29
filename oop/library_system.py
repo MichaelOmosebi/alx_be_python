@@ -33,7 +33,7 @@ class Book:
 
     def __repr__(self):
         """Official representation of the Book instance."""
-        return f"{self.title}, {self.author}"
+        return f"{self.title}, by {self.author} "
     
 class EBook(Book):
     def __init__(self, title: str, author: str, file_size: int) -> None:
@@ -43,7 +43,7 @@ class EBook(Book):
     
     def __repr__(self):
         """Official representation of the Book instance."""
-        return f"{self.title}, {self.author}, File Size: {self.file_size}KB"
+        return f"{self.title}, by {self.author}, File Size: {self.file_size}KB "
 
 
 class PrintBook(Book):
@@ -54,7 +54,7 @@ class PrintBook(Book):
     
     def __repr__(self):
         """Official representation of the Book instance."""
-        return f"{self.title}, {self.author}, Page Count: {self.page_count}"
+        return f"{self.title}, by {self.author}, Page Count: {self.page_count} "
 
 
 class Library:
@@ -76,6 +76,19 @@ class Library:
 
 # print(book)  # Expected to use __str__
 
+# - [Got]
+# Book: Pride and Prejudice, Jane Austen
+# EBook: Snow Crash, Neal Stephenson, File Size: 500KB
+# PrintBook: The Catcher in the Rye, J.D. Salinger, Page Count: 234
+# (158 chars long)
+# [stderr]: 
+# (0 chars long)
+
+# [Expected]
 # Book: Pride and Prejudice by Jane Austen
 # EBook: Snow Crash by Neal Stephenson, File Size: 500KB
 # PrintBook: The Catcher in the Rye by J.D. Salinger, Page Count: 234
+
+# (164 chars long)
+# [stderr]: [Anything]
+# (0 chars long)
